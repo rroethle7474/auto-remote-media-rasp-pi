@@ -1,0 +1,15 @@
+[Unit]
+Description=Grandma's Media Player
+After=multi-user.target
+
+[Service]
+Type=simple
+User=rroethle
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/rroethle/.Xauthority
+ExecStart=/home/rroethle/Desktop/media-player/start_media_player.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,77 @@
+RaspberryPi-MediaPlayer-Grandma-Update.txt
+
+Project Summary - Raspberry Pi Media Player for Grandma
+
+ACCOMPLISHED:
+
+Hardware Setup:
+- Raspberry Pi 5 with CanaKit (8GB RAM, 128GB storage)
+- FLIRC USB device for remote control
+- HDMI connection to TV
+
+Software Implementation:
+1. Core Media Player Features:
+   - Implemented VLC-based media player
+   - Random video selection from numbered files (1-100)
+   - Fullscreen playback with audio support
+   - Play/Pause toggle functionality
+   - Stop and restart capability
+
+2. Remote Control Integration:
+   - Successfully configured FLIRC device
+   - Enter button: Play/Pause toggle
+   - Down button: Stop current video
+   - Clean exit functionality
+
+3. User Interface:
+   - Added fullscreen status display
+   - Clear text indicators for system state
+   - Loading/Ready/Error status messages
+   - User-friendly instructions
+
+4. Auto-Start Configuration:
+   - Created systemd service for automatic startup
+   - Implemented virtual environment activation
+   - Added error handling and recovery
+
+File Locations:
+- Application: /home/rroethle/Desktop/media-player/app.py
+- Videos: /home/rroethle/Desktop/media-player/Videos/AndyGriffith/
+- Virtual Environment: /home/rroethle/Desktop/media-player/mediaPlayer/bin
+
+CURRENT CHALLENGES:
+
+HDMI/CEC Implementation:
+- TV not consistently appearing in CEC bus scan
+- Input switching reliability issues
+- Need to investigate HDMI configuration
+
+REQUIRED PACKAGES:
+- python-vlc
+- evdev
+- tkinter (usually included with Python)
+
+STARTUP SCRIPTS:
+1. start_media_player.sh location:
+   /home/rroethle/Desktop/media-player/start_media_player.sh
+
+2. systemd service:
+   /etc/systemd/system/media-player.service
+
+NEXT STEPS:
+1. Resolve HDMI input switching issues:
+   - Test different HDMI ports
+   - Verify TV CEC/Anynet+ settings
+   - Consider alternative input switching methods
+
+2. Potential Improvements:
+   - Add error logging
+   - Implement automatic recovery
+   - Consider adding volume controls
+   - Add show progress indicator
+
+Notes:
+- Videos should be numbered 1-100 (.mpg format)
+- System designed for simplicity and reliability
+- Status screen provides clear user feedback
+- Auto-starts on boot for minimal user intervention
