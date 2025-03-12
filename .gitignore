@@ -4,6 +4,8 @@ include/
 lib/
 lib64/
 pyvenv.cfg
+mediaPlayer/
+rasp-pi/
 
 # Python bytecode
 __pycache__/
@@ -34,3 +36,6 @@ Thumbs.db
 # Logs and databases
 *.log
 *.sqlite
+
+# VLC
+vlc/
